@@ -1,13 +1,15 @@
 import './lib'
 import Vue from 'vue'
 import App from './app'
-
+import VueDragResize from 'vue-drag-resize'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import AttrComponent from './attr'
 window.Vue = Vue
+
 Vue.use(ElementUI)
 Vue.use(AttrComponent)
+Vue.component('vue-drag-resize', VueDragResize)
 
 new Vue(App).$mount('#app')
 
